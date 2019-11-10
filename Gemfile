@@ -15,6 +15,13 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'thin'
 
+#Omniauth gems to use the facebook omni login
+gem 'omniauth'
+gem 'omniauth-facebook'
+
+#ensures that environment variables are correctly loaded into the ENV and in a secure manner
+gem 'dotenv-rails'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
