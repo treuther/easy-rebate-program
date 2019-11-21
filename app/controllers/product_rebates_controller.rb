@@ -1,0 +1,2 @@
+class ProductRebatesController < ApplicationController
+end

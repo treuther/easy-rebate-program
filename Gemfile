@@ -17,7 +17,7 @@ gem 'thin'
 
 #Omniauth gems to use the facebook omni login
 gem 'omniauth'
-gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 #ensures that environment variables are correctly loaded into the ENV and in a secure manner
 gem 'dotenv-rails'

@@ -1,0 +1,2 @@
+class RebatesController < ApplicationController
+end

@@ -1,0 +1,2 @@
+module UserRebatesHelper
+end
