@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'thin'
 
+
 #Omniauth gems to use the facebook omni login
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
@@ -32,7 +33,7 @@ gem 'turbolinks'
 # gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

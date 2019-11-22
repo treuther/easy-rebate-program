@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :user_rebates
   resources :rebates
   resources :refunds
-  resources :users
+  resources :users, only: [:show]
 
   get '/' => 'sessions#welcome'
   get '/login' => 'sessions#new'
