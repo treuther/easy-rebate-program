@@ -4,6 +4,10 @@ class RebatesController < ApplicationController
         @rebates = Rebate.all
     end
 
+    def show
+        @rebate = Rebate.find_by(:id => params[:id])
+    end
+
     def new
         @rebate = Rebate.new
     end
@@ -16,9 +20,6 @@ class RebatesController < ApplicationController
             flash[:error] = "Sorry, rebate did not save. Please try again."
             render :new
         end
-    end
-
-    def show
     end
 
     private

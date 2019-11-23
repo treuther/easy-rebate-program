@@ -2,7 +2,7 @@
 
     <% @rebates.each do |rebate| %>
         <div>
-        <p><%= rebate.rebate_name %></p>
+        <p><%= link_to rebate.rebate_name, rebate_path(rebate) %></p>
         <p><%= rebate.description %></p>
         </div>
     <% end %>

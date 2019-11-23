@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :rebates
   resources :refunds
   resources :users
-
+  
   get '/' => 'sessions#welcome'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/auth/google_oauth2/callback' => 'sessions#omniauth'
   get '/logout' => 'sessions#destroy'
 
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -18,9 +18,9 @@
             </strong></td>
         </tr>
 
-        <% @rebates.user_id.each do |rebate| %>
+        <% @user.rebates.each do |rebate| %>
         <tr>
-            <td>Rebate <%= rebate.id %></td>
+            <td>Rebate <%= rebate.user_id %></td>
             <td><%= rebate.rebate_name %>2</td>
             <td><%= rebate.rebate_name %>3</td>
             <td><%= rebate.status %></td>
