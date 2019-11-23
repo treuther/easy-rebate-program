@@ -15,6 +15,7 @@
                 <% else %>
                     Rebate Count
                 <% end %>
+            </td>
                 <td><strong>Rebate Name</strong></td>
                 <td><strong>Amount</strong></td>
                 <td><strong>Status</strong></td>
@@ -25,15 +26,16 @@
         <tr>
             <td>
                 <% if current_user.admin %>
-                    <%= rebate.username %>
+                    <%= rebate.rebate_name %>
                 <% else %>
                     Rebate <%= rebate.id %>
                 <% end %>
-            <td>
-            <td><%= rebate.rebate_name %></td>
-            <td><%= @user.refund.amount %></td>
+            </td>
+            <td><%= rebate.rebate_name %>2</td>
+            <td><%= rebate.rebate_name %>3</td>
             <td><%= rebate.status %></td>
         </tr>
+        
         <% end %>
     </tbody>
 </table>
