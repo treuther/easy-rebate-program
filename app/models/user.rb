@@ -4,6 +4,8 @@ class User < ApplicationRecord
     has_many :rebates, through: :user_rebates
     has_many :refunds
 
+    validates :username, uniqueness: true, presence: true
+
     has_secure_password
 
     def self.create_by_google_omniauth(auth)
