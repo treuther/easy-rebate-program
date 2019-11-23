@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete :user_id
+    session.clear
     redirect_to '/'
   end
 
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
           #if @user && @user.authenticate(params[:user][:password])
           if @user.try(:authenticate, params[:user][:password])
               session[:user_id] = @user.id
-              redirect_to user_rebates_path(@user)
+              redirect_to user_path(@user)
           else
               flash[:error] = "Sorry, login info was incorrect. Please try again."
               redirect_to login_path

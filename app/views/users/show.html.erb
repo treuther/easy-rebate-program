@@ -1,2 +1,30 @@
 <h1>Welcome to the Easy Rebate Program!</h1>
 
+<h2>Your Submitted Rebates</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th colspan="4"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><strong>Rebate Count</strong></td>
+                <td><strong>Rebate Name</strong></td>
+                <td><strong>Amount</strong></td>
+                <td><strong>Status</strong></td>
+            </strong></td>
+        </tr>
+
+        <% @rebates.user_id.each do |rebate| %>
+        <tr>
+            <td>Rebate <%= rebate.id %></td>
+            <td><%= rebate.rebate_name %>2</td>
+            <td><%= rebate.rebate_name %>3</td>
+            <td><%= rebate.status %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

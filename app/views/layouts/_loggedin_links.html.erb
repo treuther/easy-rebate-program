@@ -1,10 +1,10 @@
 <% if logged_in? %>
     <footer>
-        <%= link_to "Log Out", logout_path %> |
         <%= link_to "Available Rebates", rebates_path %> |
         <% if current_user.admin %>
             <%= link_to "Create New Rebate", new_rebate_path %> |
         <% end %>
-        <%= link_to "Your Dashboard", user_rebates_path %>
+        <%= link_to "Your Dashboard", user_rebates_path %> |
+        <%= link_to "Log Out", logout_path %>
     </footer>
 <% end %>
