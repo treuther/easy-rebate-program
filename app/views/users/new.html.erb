@@ -1,5 +1,7 @@
 <h1>Welcome! Please Signup!</h1>
 
+<p><%= flash[:error] %></p> <!--see notepad-->
+
 <%= form_for @user do |f|%>
     <%= f.label :username %>: <%= f.text_field :username %><br>
     

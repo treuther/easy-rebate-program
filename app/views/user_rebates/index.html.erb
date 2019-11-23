@@ -1,0 +1,39 @@
+<h1>Submitted Rebates</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th colspan="4"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><strong>
+                <% if current_user.admin %>
+                    Client
+                <% else %>
+                    Rebate Count
+                <% end %>
+                <td><strong>Rebate Name</strong></td>
+                <td><strong>Amount</strong></td>
+                <td><strong>Status</strong></td>
+            </strong></td>
+        </tr>
+
+        <% @rebates.each do |rebate| %>
+        <tr>
+            <td>
+                <% if current_user.admin %>
+                    <%= rebate.username %>
+                <% else %>
+                    Rebate <%= rebate.id %>
+                <% end %>
+            <td>
+            <td><%= rebate.rebate_name %></td>
+            <td><%= @user.refund.amount %></td>
+            <td><%= rebate.status %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

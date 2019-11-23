@@ -1,0 +1,8 @@
+<h1>Available Rebates</h1>
+
+    <% @rebates.each do |rebate| %>
+        <div>
+        <p><%= rebate.rebate_name %></p>
+        <p><%= rebate.description %></p>
+        </div>
+    <% end %>
